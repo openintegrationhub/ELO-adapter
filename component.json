@@ -1,0 +1,42 @@
+{
+  "title": "Elo API (Java)",
+  "description": "elastic.io component for the ELO API",
+  "credentials": {
+    "fields": {
+      "ixUrl": {
+      	"label": "IX URL",
+      	 "required": true,
+        "viewClass": "TextFieldView"
+      },
+      "username": {
+        "label": "Username",
+        "required": true,
+        "viewClass": "TextFieldView"
+      },
+      "password": {
+        "label": "Password",
+        "required": true,
+        "viewClass": "TextFieldView"
+      }
+    },
+    "verifier": "com.elo.elastic.CredentialsVerifier"
+  },
+  "triggers": {
+    "getPetsByStatus": {
+      "main": "com.elo.elastic.GetSord",
+      "type": "polling",
+      "title": "Get Sord",
+      "description": "Retrieves Sord data",
+      "fields": {
+        "id": {
+          "label": "ID / GUID",
+          "required": true,
+          "viewClass": "TextFieldView"
+        }
+      },
+      "metadata": {
+        "out": "./schemas/eloSord.out.json"
+      }
+    }
+  }
+}

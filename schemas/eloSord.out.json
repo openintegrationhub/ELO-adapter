@@ -1,0 +1,285 @@
+{
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "changedMembers": {
+      "$id": "/properties/changedMembers",
+      "type": "integer"
+    },
+    "dbHelper": {
+      "$id": "/properties/dbHelper",
+      "type": "null"
+    },
+    "acl": {
+      "$id": "/properties/acl",
+      "type": "string"
+    },
+    "att": {
+      "$id": "/properties/att",
+      "type": "integer"
+    },
+    "childCount": {
+      "$id": "/properties/childCount",
+      "type": "integer"
+    },
+    "doc": {
+      "$id": "/properties/doc",
+      "type": "integer"
+    },
+    "guid": {
+      "$id": "/properties/guid",
+      "type": "string"
+    },
+    "histCount": {
+      "$id": "/properties/histCount",
+      "type": "integer"
+    },
+    "id": {
+      "$id": "/properties/id",
+      "type": "integer"
+    },
+    "info": {
+      "$id": "/properties/info",
+      "type": "integer"
+    },
+    "key": {
+      "$id": "/properties/key",
+      "type": "integer"
+    },
+    "kind": {
+      "$id": "/properties/kind",
+      "type": "integer"
+    },
+    "lockId": {
+      "$id": "/properties/lockId",
+      "type": "integer"
+    },
+    "mask": {
+      "$id": "/properties/mask",
+      "type": "integer"
+    },
+    "name": {
+      "$id": "/properties/name",
+      "type": "string"
+    },
+    "ownerId": {
+      "$id": "/properties/ownerId",
+      "type": "integer"
+    },
+    "parentId": {
+      "$id": "/properties/parentId",
+      "type": "integer"
+    },
+    "path": {
+      "$id": "/properties/path",
+      "type": "integer"
+    },
+    "type": {
+      "$id": "/properties/type",
+      "type": "integer"
+    },
+    "vtRep": {
+      "$id": "/properties/vtRep",
+      "type": "integer"
+    },
+    "access": {
+      "$id": "/properties/access",
+      "type": "integer"
+    },
+    "aclItems": {
+      "$id": "/properties/aclItems",
+      "type": "null"
+    },
+    "delDateIso": {
+      "$id": "/properties/delDateIso",
+      "type": "string"
+    },
+    "deleted": {
+      "$id": "/properties/deleted",
+      "type": "boolean"
+    },
+    "desc": {
+      "$id": "/properties/desc",
+      "type": "string"
+    },
+    "details": {
+      "$id": "/properties/details",
+      "type": "object",
+      "properties": {
+        "changedMembers": {
+          "$id": "/properties/details/properties/changedMembers",
+          "type": "integer"
+        },
+        "dbHelper": {
+          "$id": "/properties/details/properties/dbHelper",
+          "type": "null"
+        },
+        "archivingMode": {
+          "$id": "/properties/details/properties/archivingMode",
+          "type": "integer"
+        },
+        "encryptionSet": {
+          "$id": "/properties/details/properties/encryptionSet",
+          "type": "integer"
+        },
+        "fulltext": {
+          "$id": "/properties/details/properties/fulltext",
+          "type": "boolean"
+        },
+        "sortOrder": {
+          "$id": "/properties/details/properties/sortOrder",
+          "type": "integer"
+        },
+        "arcReplEnabled": {
+          "$id": "/properties/details/properties/arcReplEnabled",
+          "type": "boolean"
+        },
+        "fulltextDone": {
+          "$id": "/properties/details/properties/fulltextDone",
+          "type": "boolean"
+        },
+        "replRoot": {
+          "$id": "/properties/details/properties/replRoot",
+          "type": "boolean"
+        },
+        "linked": {
+          "$id": "/properties/details/properties/linked",
+          "type": "boolean"
+        },
+        "incomplete": {
+          "$id": "/properties/details/properties/incomplete",
+          "type": "boolean"
+        },
+        "limitedReleaseDocument": {
+          "$id": "/properties/details/properties/limitedReleaseDocument",
+          "type": "boolean"
+        },
+        "linkedPermanent": {
+          "$id": "/properties/details/properties/linkedPermanent",
+          "type": "boolean"
+        },
+        "documentContainer": {
+          "$id": "/properties/details/properties/documentContainer",
+          "type": "boolean"
+        },
+        "translateSordName": {
+          "$id": "/properties/details/properties/translateSordName",
+          "type": "boolean"
+        },
+        "sealed": {
+          "$id": "/properties/details/properties/sealed",
+          "type": "boolean"
+        }
+      }
+    },
+    "docVersion": {
+      "$id": "/properties/docVersion",
+      "type": "null"
+    },
+    "hiddenText": {
+      "$id": "/properties/hiddenText",
+      "type": "string"
+    },
+    "linksComeIn": {
+      "$id": "/properties/linksComeIn",
+      "type": "null"
+    },
+    "linksGoOut": {
+      "$id": "/properties/linksGoOut",
+      "type": "null"
+    },
+    "lockName": {
+      "$id": "/properties/lockName",
+      "type": "string"
+    },
+    "objKeys": {
+      "$id": "/properties/objKeys",
+      "type": "array"
+    },
+    "ownerName": {
+      "$id": "/properties/ownerName",
+      "type": "string"
+    },
+    "parentIds": {
+      "$id": "/properties/parentIds",
+      "type": "null"
+    },
+    "refPaths": {
+      "$id": "/properties/refPaths",
+      "type": "null"
+    },
+    "replNames": {
+      "$id": "/properties/replNames",
+      "type": "null"
+    },
+    "replSet": {
+      "$id": "/properties/replSet",
+      "type": "null"
+    },
+    "maskName": {
+      "$id": "/properties/maskName",
+      "type": "string"
+    },
+    "attVersion": {
+      "$id": "/properties/attVersion",
+      "type": "null"
+    },
+    "deleteDateIso": {
+      "$id": "/properties/deleteDateIso",
+      "type": "string"
+    },
+    "lockIdSord": {
+      "$id": "/properties/lockIdSord",
+      "type": "integer"
+    },
+    "lockIdDoc": {
+      "$id": "/properties/lockIdDoc",
+      "type": "integer"
+    },
+    "lockNameSord": {
+      "$id": "/properties/lockNameSord",
+      "type": "string"
+    },
+    "lockNameDoc": {
+      "$id": "/properties/lockNameDoc",
+      "type": "string"
+    },
+    "deleteUser": {
+      "$id": "/properties/deleteUser",
+      "type": "integer"
+    },
+    "tstampAcl": {
+      "$id": "/properties/tstampAcl",
+      "type": "string"
+    },
+    "tstampAclSync": {
+      "$id": "/properties/tstampAclSync",
+      "type": "string"
+    },
+    "tstampSync": {
+      "$id": "/properties/tstampSync",
+      "type": "string"
+    },
+    "idateIso": {
+      "$id": "/properties/idateIso",
+      "type": "string"
+    },
+    "tstamp": {
+      "$id": "/properties/tstamp",
+      "type": "string"
+    },
+    "sreg": {
+      "$id": "/properties/sreg",
+      "type": "string"
+    },
+    "xdateIso": {
+      "$id": "/properties/xdateIso",
+      "type": "string"
+    },
+    "sealed": {
+      "$id": "/properties/sealed",
+      "type": "boolean"
+    }
+  }
+}
