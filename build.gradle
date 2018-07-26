@@ -12,10 +12,7 @@ targetCompatibility = 1.8
 
 repositories {
     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
-    maven { url 'http://maven:8081/nexus/content/groups/public' }
-    maven { url 'http://maven:8081/nexus/content/repositories/JavaLib/' }
     mavenCentral()
-    mavenLocal()
 }
 
 dependencies {
@@ -23,7 +20,7 @@ dependencies {
     compile "io.elastic:sailor-jvm:2.0.1"
     
     // ix
-    compile group: 'elo', name:'EloixClient', version: '11.02.000'
+    compile files('libs/EloixClient-11.02.000.jar')
     compile "commons-codec.commons-codec:1.11"
     
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
