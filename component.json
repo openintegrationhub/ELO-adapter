@@ -19,7 +19,7 @@
         "viewClass": "TextFieldView"
       }
     },
-    "verifier": "com.elo.elastic.CredentialsVerifier"
+    "verifier": "com.elo.elastic.EloCredentialsVerifier"
   },
   "triggers": {
     "getSord": {
