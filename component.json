@@ -22,7 +22,7 @@
     "verifier": "com.elo.elastic.CredentialsVerifier"
   },
   "triggers": {
-    "getPetsByStatus": {
+    "getSord": {
       "main": "com.elo.elastic.GetSord",
       "type": "polling",
       "title": "Get Sord",
