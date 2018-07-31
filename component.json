@@ -35,7 +35,7 @@
         }
       },
       "metadata": {
-        "out": "./schemas/eloSord.out.json"
+        "out": "./schemas/getSord.out.json"
       }
     }
   }
