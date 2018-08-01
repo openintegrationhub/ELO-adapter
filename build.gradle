@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
 	// elastic
-    compile "io.elastic:sailor-jvm:2.0.1"
+    compile "io.elastic:sailor-jvm:2.1.0"
     
     // ix
     compile files('libs/EloixClient-11.02.000.jar')
