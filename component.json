@@ -21,7 +21,7 @@
     },
     "verifier": "com.elo.elastic.EloCredentialsVerifier"
   },
-  "triggers": {
+  "actions": {
     "getSord": {
       "main": "com.elo.elastic.GetSord",
       "type": "polling",
