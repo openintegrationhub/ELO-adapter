@@ -22,20 +22,30 @@
     "verifier": "com.elo.elastic.EloCredentialsVerifier"
   },
   "actions": {
-    "getSord": {
-      "main": "com.elo.elastic.GetSord",
+    "CreateDir": {
+      "main": "com.elo.elastic.CreateDir",
       "type": "polling",
-      "title": "Get Sord",
-      "description": "Retrieves Sord data",
+      "title": "CreateDir",
+      "description": "CreateDir",
       "fields": {
-        "id": {
-          "label": "ID / GUID",
+        "label": {
+          "label": "label",
           "required": true,
           "viewClass": "TextFieldView"
+        },
+        "maskId": {
+          "label": "maskId",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "type": {
+          "label": "type",
+          "required": true,
+          "viewClass": "NumberFieldView"
         }
       },
       "metadata": {
-        "out": "./schemas/getSord.out.json"
+        "out": "./schemas/CreateDir.out.json"
       }
     }
   }
