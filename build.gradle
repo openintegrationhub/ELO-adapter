@@ -7,8 +7,8 @@ apply plugin: 'java-library-distribution'
 group = 'com.elo'
 version = '1.0.0'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 
 repositories {
     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
@@ -26,16 +26,17 @@ dependencies {
     
     // json converter
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.0'
+	
+	// producing definitions using reflection
+	testCompile group: 'org.reflections', name: 'reflections', version: '0.9.11'
+	testCompile 'com.fasterxml.jackson.module:jackson-module-jsonSchema:2.10.0'
+	testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
 }
 
 uploadArchives {
     repositories {
         mavenLocal()
     }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.0'
 }
 
 
