@@ -7,8 +7,8 @@ apply plugin: 'java-library-distribution'
 group = 'com.elo'
 version = '1.0.0'
 
-sourceCompatibility = 11
-targetCompatibility = 11
+sourceCompatibility = 8
+targetCompatibility = 8
 
 
 repositories {
@@ -22,7 +22,7 @@ dependencies {
     
     // ix
     compile files('libs/EloixClient-12.01.001.jar')
-    compile files('libs/Ix4dummies-12.01.000.jar')
+    compile files('libs/Ix4dummies-12.01.001_OIH_special.jar') // special Java 8 Version for OIH
     compile group: 'commons-codec', name: 'commons-codec', version: '1.11'
     
     // json converter
