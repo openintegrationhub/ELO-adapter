@@ -43,7 +43,7 @@ public class Utils {
 	}
 	
 	public static Integer getInt(JsonObject config, String key) {
-		return Integer.valueOf(config.containsKey(key) ? config.getInt(key) : 0);
+		return config.containsKey(key) ? Integer.valueOf(config.getString(key)) : 0;
 	}
 	
 	public static String getGuidOrId(JsonObject config) {
