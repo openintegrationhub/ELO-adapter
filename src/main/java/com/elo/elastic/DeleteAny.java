@@ -32,7 +32,7 @@ public class DeleteAny extends IxOperation<Void> {
 
 	@Override
 	protected Void run(IX ix, JsonObject config) throws Exception {
-		String guid = Utils.getGuidOrId(config);
+		String guid = Utils.getString(config, "uid");
 		ix.sords.delete(guid);
 		return null;
 	}

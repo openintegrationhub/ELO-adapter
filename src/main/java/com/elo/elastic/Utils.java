@@ -49,7 +49,7 @@ public class Utils {
 		String val = getString(config, key);
 		return val != null ? Integer.valueOf(config.getString(key)) : 0;
 	}
-	
+	/*
 	public static String getGuidOrId(JsonObject config) {
 		if( config.containsKey("guid") )
 			return config.getString("guid");
@@ -60,7 +60,7 @@ public class Utils {
 		else
 			throw new IllegalArgumentException("Missing guid, id or path in config parameters: " + config);
 	}
-	
+	*/
 	
 	public static ExtendedEloObject toEloObject(SimpleSord ss) {
 		ExtendedEloObject eloObj = toEloObject(ss.info);

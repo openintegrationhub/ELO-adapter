@@ -35,7 +35,7 @@ public class ReadDoc extends IxOperation<EloObject> {
 
 	@Override
 	protected EloObject run(IX ix, JsonObject config) throws Exception {
-		String guid = Utils.getGuidOrId(config);		
+		String guid = Utils.getString(config, "uid");		
 		SimpleSord ss = ix.sords.get(guid, SordFeature.INFO);
 		ExtendedEloObject obj = Utils.toEloObject(ss);
 		return obj;

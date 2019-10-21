@@ -38,7 +38,7 @@ public class UpdateDoc extends IxOperation<Void> {
 
 	@Override
 	protected Void run(IX ix, JsonObject config) throws Exception {
-		String guid = Utils.getGuidOrId(config);
+		String guid = Utils.getString(config, "uid");
 		
 		String url = config.getString("url");
 		String filename = Utils.getString(config, "filename");

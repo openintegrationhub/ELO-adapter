@@ -33,18 +33,8 @@
       "title": "ReadDir",
       "description": "ReadDir",
       "fields": {
-        "guid": {
-          "label": "guid",
-          "required": false,
-          "viewClass": "TextFieldView"
-        },
-        "id": {
-          "label": "id",
-          "required": false,
-          "viewClass": "TextFieldView"
-        },
-        "path": {
-          "label": "path",
+        "uid": {
+          "label": "uid",
           "required": false,
           "viewClass": "TextFieldView"
         }
@@ -59,18 +49,8 @@
       "title": "ReadDoc",
       "description": "ReadDoc",
       "fields": {
-        "guid": {
-          "label": "guid",
-          "required": false,
-          "viewClass": "TextFieldView"
-        },
-        "id": {
-          "label": "id",
-          "required": false,
-          "viewClass": "TextFieldView"
-        },
-        "path": {
-          "label": "path",
+        "uid": {
+          "label": "uid",
           "required": false,
           "viewClass": "TextFieldView"
         }
@@ -167,18 +147,8 @@
       "title": "DeleteAny",
       "description": "DeleteAny",
       "fields": {
-       "guid": {
-          "label": "guid",
-          "required": false,
-          "viewClass": "TextFieldView"
-        },
-        "id": {
-          "label": "id",
-          "required": false,
-          "viewClass": "TextFieldView"
-        },
-        "path": {
-          "label": "path",
+       "uid": {
+          "label": "uid",
           "required": false,
           "viewClass": "TextFieldView"
         }
@@ -189,18 +159,8 @@
       "title": "UpdateDoc",
       "description": "UpdateDoc",
       "fields": {
-       "guid": {
-          "label": "guid",
-          "required": false,
-          "viewClass": "TextFieldView"
-        },
-        "id": {
-          "label": "id",
-          "required": false,
-          "viewClass": "TextFieldView"
-        },
-        "path": {
-          "label": "path",
+       "uid": {
+          "label": "uid",
           "required": false,
           "viewClass": "TextFieldView"
         },

@@ -37,7 +37,7 @@ public class ReadDir extends IxOperation<EloObject> {
 
 	@Override
 	protected EloObject run(IX ix, JsonObject config) throws Exception {
-		String guid = Utils.getGuidOrId(config);
+		String guid = Utils.getString(config, "uid");
 		SimpleSord ss = ix.sords.get(guid, SordFeature.INFO, SordFeature.CHILDREN);
 		ExtendedEloObject obj = Utils.toEloObject(ss);
 		obj.children = ss.children.stream().map(c -> Utils.toEloObject(c)).collect(Collectors.toList());
