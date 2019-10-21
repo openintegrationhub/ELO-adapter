@@ -32,7 +32,7 @@ public class CreateDir extends IxOperation<Integer> {
 
 	@Override
 	protected Integer run(IX ix, JsonObject config) throws Exception {
-		String parentId = Utils.getGuidOrId(config);
+		String parentId = Utils.getString(config, "parentUid");
 		String name = Utils.getString(config, "label");
 		String maskId = Utils.getString(config, "maskId");
 		int type = Utils.getInt(config, "type");

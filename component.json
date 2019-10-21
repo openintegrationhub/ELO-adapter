@@ -81,12 +81,16 @@
     }
   },
   "actions": {
-    "CreateDir": {
-      "main": "com.elo.elastic.CreateDir",
-      "type": "polling",
-      "title": "CreateDir",
-      "description": "CreateDir",
+    "CreateDoc": {
+      "main": "com.elo.elastic.CreateDoc",
+      "title": "CreateDoc",
+      "description": "CreateDoc",
       "fields": {
+        "parentUid": {
+          "label": "parentUid",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
         "label": {
           "label": "label",
           "required": true,
@@ -100,11 +104,168 @@
         "type": {
           "label": "type",
           "required": true,
-          "viewClass": "NumberFieldView"
+          "viewClass": "TextFieldView"
+        },
+        
+        "url": {
+          "label": "url",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "filename": {
+          "label": "filename",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "mimetype": {
+          "label": "mimetype",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "versionLabel": {
+          "label": "versionLabel",
+          "required": false,
+          "viewClass": "TextFieldView"
         }
       },
       "metadata": {
         "out": "./schemas/Int.json"
+      }
+    },
+    "CreateDir": {
+      "main": "com.elo.elastic.CreateDir",
+      "title": "CreateDir",
+      "description": "CreateDir",
+      "fields": {
+       "parentUid": {
+          "label": "parentUid",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "label": {
+          "label": "label",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "maskId": {
+          "label": "maskId",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "type": {
+          "label": "type",
+          "required": true,
+          "viewClass": "TextFieldView"
+        }
+      },
+      "metadata": {
+        "out": "./schemas/Int.json"
+      }
+    },
+    "DeleteAny": {
+      "main": "com.elo.elastic.DeleteAny",
+      "title": "DeleteAny",
+      "description": "DeleteAny",
+      "fields": {
+       "guid": {
+          "label": "guid",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "id": {
+          "label": "id",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "path": {
+          "label": "path",
+          "required": false,
+          "viewClass": "TextFieldView"
+        }
+      },
+      "metadata": {
+        "out": ""
+      }
+    },
+    "UpdateDoc": {
+      "main": "com.elo.elastic.UpdateDoc",
+      "title": "UpdateDoc",
+      "description": "UpdateDoc",
+      "fields": {
+       "guid": {
+          "label": "guid",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "id": {
+          "label": "id",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "path": {
+          "label": "path",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        
+        "url": {
+          "label": "url",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "filename": {
+          "label": "filename",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "mimetype": {
+          "label": "mimetype",
+          "required": true,
+          "viewClass": "TextFieldView"
+        },
+        "versionLabel": {
+          "label": "versionLabel",
+          "required": false,
+          "viewClass": "TextFieldView"
+        }
+      },
+      "metadata": {
+        "out": ""
+      }
+    },
+    "UpdateObj": {
+      "main": "com.elo.elastic.UpdateObj",
+      "title": "UpdateObj",
+      "description": "UpdateObj",
+      "fields": {
+       "guid": {
+          "label": "guid",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "id": {
+          "label": "id",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "description": {
+          "label": "description",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "label": {
+          "label": "label",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "parentUid": {
+          "label": "parentUid",
+          "required": false,
+          "viewClass": "TextFieldView"
+        }
+      },
+      "metadata": {
+        "out": ""
       }
     }
   }

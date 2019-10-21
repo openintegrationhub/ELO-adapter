@@ -43,7 +43,7 @@ public class Utils {
 	}
 	
 	public static Integer getInt(JsonObject config, String key) {
-		return config.containsKey(key) ? config.getInt(key) : 0;
+		return Integer.valueOf(config.containsKey(key) ? config.getInt(key) : 0);
 	}
 	
 	public static String getGuidOrId(JsonObject config) {
@@ -56,19 +56,7 @@ public class Utils {
 		else
 			throw new IllegalArgumentException("Missing guid, id or path in config parameters: " + config);
 	}
-	public static ExtendedEloObject toEloObject(JsonObject config) {
-		ExtendedEloObject obj = new ExtendedEloObject();
-		obj.id = getInt(config, "id");
-		obj.guid = getString(config, "guid");
-		//obj.setAdditionalProperty(name, value);
-		obj.setBaseType(BaseType.valueOf(config.getString("baseType")));
-		obj.setDescription(config.getString("description"));
-		obj.setLabel(config.getString("label"));
-		//obj.setMetadata(metadata);
-		obj.setParentUid(config.getString("parentUid"));
-		obj.setPath(config.getString("path"));
-		return obj;
-	}
+	
 	
 	public static ExtendedEloObject toEloObject(SimpleSord ss) {
 		ExtendedEloObject eloObj = toEloObject(ss.info);

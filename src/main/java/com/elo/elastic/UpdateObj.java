@@ -38,17 +38,16 @@ public class UpdateObj extends IxOperation<Void> {
 
 	@Override
 	protected Void run(IX ix, JsonObject config) throws Exception {
-		ExtendedEloObject eloObj = Utils.toEloObject(config);
+		// input should match attributes of ExtendedEloObject
 		SimpleSord ss = new SimpleSord();
 		ss.info = new SordInfo();
-		ss.info.id = eloObj.id;
-		ss.info.guid = eloObj.guid;
-		ss.info.desc = eloObj.getDescription();
-		ss.info.name = eloObj.getLabel();
-		ss.info.parentId = Integer.valueOf(eloObj.getParentUid());
+		ss.info.id = Utils.getInt(config, "id");
+		ss.info.guid = Utils.getString(config, "guid");
+		ss.info.desc = Utils.getString(config, "description");
+		ss.info.name = Utils.getString(config, "label");
+		ss.info.parentId = Utils.getInt(config, "parentUid");
 		
 		// ignore the rest
-		
 		
 		ix.sords.set(ss);
 		
