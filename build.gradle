@@ -12,13 +12,12 @@ targetCompatibility = 8
 
 
 repositories {
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     mavenCentral()
 }
 
 dependencies {
 	// elastic
-    compile "io.elastic:sailor-jvm:2.1.1"
+    compile "io.elastic:sailor-jvm:2.0.1"
     
     // ix
     compile files('libs/EloixClient-12.01.001.jar')
