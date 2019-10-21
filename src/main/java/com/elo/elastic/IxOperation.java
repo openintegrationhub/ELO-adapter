@@ -54,6 +54,9 @@ public abstract class IxOperation<R> implements Module {
 				Message data = new Message.Builder().body(jsonObj).build();
 				parameters.getEventEmitter().emitData(data);
 			}
+			else {
+				parameters.getEventEmitter().emitData(null);
+			}
 			
 		} catch (Exception e) {
 			logger.error("Operation failed", e);
