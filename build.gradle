@@ -20,13 +20,19 @@ dependencies {
 	// elastic
     compile "io.elastic:sailor-jvm:2.1.1"
     
-    // ix
+    // ix client + deps
     compile files('libs/EloixClient-12.01.001.jar')
+    compile "commons-codec:commons-codec:1.11"
+    compile "org.slf4j:slf4j-api:1.7.25"
+    
+    // ix4dummies + deps
     compile files('libs/Ix4dummies-12.01.001_OIH_special.jar') // special Java 8 Version for OIH
-    compile group: 'commons-codec', name: 'commons-codec', version: '1.11'
+    compile "net.jodah:expiringmap:0.5.9"
+	compile "org.apache.commons:commons-lang3:3.8.1"
+	compile "commons-logging:commons-logging:1.2"
     
     // json converter
-	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.0'
+	compile "com.fasterxml.jackson.core:jackson-databind:2.10.0"
 	
 	// producing definitions using reflection
 	testCompile group: 'org.reflections', name: 'reflections', version: '0.9.11'
