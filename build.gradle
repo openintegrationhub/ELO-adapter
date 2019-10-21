@@ -12,12 +12,13 @@ targetCompatibility = 8
 
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
 	// elastic
-    compile "io.elastic:sailor-jvm:2.0.1"
+    compile "io.elastic:sailor-jvm:2.1.1"
     
     // ix
     compile files('libs/EloixClient-12.01.001.jar')
@@ -33,12 +34,4 @@ dependencies {
 	testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
 }
 
-uploadArchives {
-    repositories {
-        mavenLocal()
-    }
-}
-
-
-// https://github.com/joelittlejohn/jsonschema2pojo/tree/master/jsonschema2pojo-gradle-plugin
 
