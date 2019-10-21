@@ -39,11 +39,15 @@ public class Utils {
 	}
 	
 	public static String getString(JsonObject config, String key) {
-		return config.containsKey(key) ? config.getString(key) : null;
+		if (!config.containsKey(key) || config.getString(key).isEmpty())
+			return null;
+		else
+			return config.getString(key);
 	}
 	
 	public static Integer getInt(JsonObject config, String key) {
-		return config.containsKey(key) ? Integer.valueOf(config.getString(key)) : 0;
+		String val = getString(config, key);
+		return val != null ? Integer.valueOf(config.getString(key)) : 0;
 	}
 	
 	public static String getGuidOrId(JsonObject config) {
