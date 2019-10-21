@@ -17,6 +17,11 @@
         "label": "Password",
         "required": true,
         "viewClass": "PasswordFieldView"
+      },
+      "language": {
+        "label": "Language (en, de, ...)",
+        "required": true,
+        "viewClass": "TextFieldView"
       }
     },
     "verifier": "com.elo.elastic.EloCredentialsVerifier"
