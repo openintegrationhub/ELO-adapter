@@ -1,5 +1,7 @@
 package com.elo.elastic;
 
+import java.util.HashMap;
+
 import javax.json.JsonObject;
 
 import org.slf4j.Logger;
@@ -48,15 +50,19 @@ public abstract class IxOperation<R> implements Module {
     		logger.info("Running " + this.getClass() + "...");
 			R result = run(ix, config);
 			
-			if( result != null ) {
+			if( result == null ) {
+				// since no response (or an empty one) is not allowed, let's throw back an empty object
+				JsonObject jsonObj = Utils.toJsonObject(new HashMap<>());
+				Message data = new Message.Builder().body(jsonObj).build();
+				parameters.getEventEmitter().emitData(data);
+			}
+			else {
 				logger.info("Sending response...");
 				JsonObject jsonObj = Utils.toJsonObject(result);
 				Message data = new Message.Builder().body(jsonObj).build();
 				parameters.getEventEmitter().emitData(data);
 			}
-			else {
-				parameters.getEventEmitter().emitData(null);
-			}
+			
 			
 		} catch (Exception e) {
 			logger.error("Operation failed", e);
