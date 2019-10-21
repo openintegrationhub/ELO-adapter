@@ -182,9 +182,6 @@
           "required": false,
           "viewClass": "TextFieldView"
         }
-      },
-      "metadata": {
-        "out": ""
       }
     },
     "UpdateDoc": {
@@ -228,9 +225,6 @@
           "required": false,
           "viewClass": "TextFieldView"
         }
-      },
-      "metadata": {
-        "out": ""
       }
     },
     "UpdateObj": {
@@ -263,9 +257,6 @@
           "required": false,
           "viewClass": "TextFieldView"
         }
-      },
-      "metadata": {
-        "out": ""
       }
     }
   }
