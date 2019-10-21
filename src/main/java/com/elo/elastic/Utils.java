@@ -50,7 +50,7 @@ public class Utils {
 		if( config.containsKey("guid") )
 			return config.getString("guid");
 		else if( config.containsKey("id") )
-			return "" + config.getInt("id");
+			return config.getString("id");
 		else if( config.containsKey("path") )
 			return config.getString("path");
 		else

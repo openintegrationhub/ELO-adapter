@@ -16,10 +16,64 @@
       "password": {
         "label": "Password",
         "required": true,
-        "viewClass": "TextFieldView"
+        "viewClass": "PasswordFieldView"
       }
     },
     "verifier": "com.elo.elastic.EloCredentialsVerifier"
+  },
+  "triggers": {
+    "ReadDir": {
+      "main": "com.elo.elastic.ReadDir",
+      "type": "polling",
+      "title": "ReadDir",
+      "description": "ReadDir",
+      "fields": {
+        "guid": {
+          "label": "guid",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "id": {
+          "label": "id",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "path": {
+          "label": "path",
+          "required": false,
+          "viewClass": "TextFieldView"
+        }
+      },
+      "metadata": {
+        "out": "./schemas/ExtendedEloObject.json"
+      }
+    },
+    "ReadDoc": {
+      "main": "com.elo.elastic.ReadDoc",
+      "type": "polling",
+      "title": "ReadDoc",
+      "description": "ReadDoc",
+      "fields": {
+        "guid": {
+          "label": "guid",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "id": {
+          "label": "id",
+          "required": false,
+          "viewClass": "TextFieldView"
+        },
+        "path": {
+          "label": "path",
+          "required": false,
+          "viewClass": "TextFieldView"
+        }
+      },
+      "metadata": {
+        "out": "./schemas/ExtendedEloObject.json"
+      }
+    }
   },
   "actions": {
     "CreateDir": {
@@ -45,7 +99,7 @@
         }
       },
       "metadata": {
-        "out": "./schemas/CreateDir.out.json"
+        "out": "./schemas/Int.json"
       }
     }
   }
