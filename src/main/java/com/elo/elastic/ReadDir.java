@@ -33,7 +33,7 @@ import io.elastic.api.ExecutionParameters;
 import io.elastic.api.Message;
 import io.elastic.api.Module;
 
-public class ReadDir  extends IxOperation<EloObject> {
+public class ReadDir extends IxOperation<EloObject> {
 
 	@Override
 	protected EloObject run(IX ix, JsonObject config) throws Exception {

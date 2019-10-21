@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.elo.elastic.model.EloObject;
+import com.elo.elastic.model.IdResult;
 import com.elo.elastic.model.EloObject.BaseType;
 import com.elo.ix4dummies.IX;
 
@@ -28,10 +29,10 @@ import io.elastic.api.ExecutionParameters;
 import io.elastic.api.Message;
 import io.elastic.api.Module;
 
-public class CreateDir extends IxOperation<Integer> {
+public class CreateDir extends IxOperation<IdResult> {
 
 	@Override
-	protected Integer run(IX ix, JsonObject config) throws Exception {
+	protected IdResult run(IX ix, JsonObject config) throws Exception {
 		String parentId = Utils.getString(config, "parentUid");
 		String name = Utils.getString(config, "label");
 		String maskId = Utils.getString(config, "maskId");
@@ -39,7 +40,9 @@ public class CreateDir extends IxOperation<Integer> {
 		
 		int id = ix.sords.addDir(parentId, name, maskId, type);
 		
-		return id;
+		IdResult res = new IdResult();
+		res.id = id;
+		return res;
 	}
 	
 

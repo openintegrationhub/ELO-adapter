@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "ELO specific ID of the object",
+      "examples": [1234]
+    }
+  }
+}

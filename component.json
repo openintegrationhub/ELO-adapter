@@ -129,7 +129,7 @@
         }
       },
       "metadata": {
-        "out": "./schemas/Int.json"
+        "out": "./schemas/IdResult.json"
       }
     },
     "CreateDir": {
@@ -159,7 +159,7 @@
         }
       },
       "metadata": {
-        "out": "./schemas/Int.json"
+        "out": "./schemas/IdResult.json"
       }
     },
     "DeleteAny": {
