@@ -22,6 +22,10 @@ public class ExtendedEloObject extends EloObject {
 	@JsonPropertyDescription("ELO Specific GUID")
 	public String guid;
 	
+	@JsonProperty("url")
+	@JsonPropertyDescription("Download URL")
+	public String url;
+	
 	@JsonProperty("children")
 	@JsonPropertyDescription("Child entries")
 	public List<ExtendedEloObject> children;

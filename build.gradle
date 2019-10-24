@@ -26,7 +26,7 @@ dependencies {
     compile "org.slf4j:slf4j-api:1.7.25"
     
     // ix4dummies + deps
-    compile files('libs/Ix4dummies-12.01.001_OIH_special.jar') // special Java 8 Version for OIH
+    compile files('libs/Ix4dummies-12.01.002_OIH_special.jar') // special Java 8 Version for OIH
     compile "net.jodah:expiringmap:0.5.9"
 	compile "org.apache.commons:commons-lang3:3.8.1"
 	compile "commons-logging:commons-logging:1.2"
@@ -37,7 +37,7 @@ dependencies {
 	// producing definitions using reflection
 	testCompile group: 'org.reflections', name: 'reflections', version: '0.9.11'
 	testCompile 'com.fasterxml.jackson.module:jackson-module-jsonSchema:2.10.0'
-	testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+	testCompile 'org.junit.jupiter:junit-jupiter:5.5.2'
 }
 
 

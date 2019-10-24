@@ -78,12 +78,12 @@
         },
         "maskId": {
           "label": "maskId",
-          "required": true,
+          "required": false,
           "viewClass": "TextFieldView"
         },
         "type": {
           "label": "type",
-          "required": true,
+          "required": false,
           "viewClass": "TextFieldView"
         },
         
@@ -94,12 +94,12 @@
         },
         "filename": {
           "label": "filename",
-          "required": true,
+          "required": false,
           "viewClass": "TextFieldView"
         },
         "mimetype": {
           "label": "mimetype",
-          "required": true,
+          "required": false,
           "viewClass": "TextFieldView"
         },
         "versionLabel": {
@@ -129,12 +129,12 @@
         },
         "maskId": {
           "label": "maskId",
-          "required": true,
+          "required": false,
           "viewClass": "TextFieldView"
         },
         "type": {
           "label": "type",
-          "required": true,
+          "required": false,
           "viewClass": "TextFieldView"
         }
       },

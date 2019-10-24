@@ -31,13 +31,14 @@ import io.elastic.api.ExecutionParameters;
 import io.elastic.api.Message;
 import io.elastic.api.Module;
 
-public class ReadDoc extends IxOperation<EloObject> {
+public class ReadDoc extends IxOperation<ExtendedEloObject> {
 
 	@Override
-	protected EloObject run(IX ix, JsonObject config) throws Exception {
+	protected ExtendedEloObject run(IX ix, JsonObject config) throws Exception {
 		String guid = Utils.getString(config, "uid");		
-		SimpleSord ss = ix.sords.get(guid, SordFeature.INFO);
+		SimpleSord ss = ix.sords.get(guid, SordFeature.INFO, SordFeature.CONTENT);
 		ExtendedEloObject obj = Utils.toEloObject(ss);
+		obj.url = ss.content.url;
 		return obj;
 	}
 }

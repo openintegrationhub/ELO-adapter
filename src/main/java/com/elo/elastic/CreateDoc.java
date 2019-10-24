@@ -43,6 +43,12 @@ public class CreateDoc extends IxOperation<IdResult> {
 		
 		String url = config.getString("url");
 		String filename = Utils.getString(config, "filename");
+		if( filename == null ) {
+			String[] parts = url.split("/");
+			filename = parts[parts.length-1];
+			if(filename.isEmpty()) // this happens if it ends with a slash
+				filename = "index.html"; // let's assume this
+		}
 		String mimetype = Utils.getString(config, "mimetype");
 		String versionLabel = Utils.getString(config, "versionLabel");
 		

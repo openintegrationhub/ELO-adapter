@@ -18,6 +18,7 @@ import de.elo.ix.client.Sord;
 
 public class Utils {
 
+	static final ObjectMapper MAPPER = new ObjectMapper(); 
 	/**
 	 * Since this stupid javax.json API cannot convert a java object to a json one, or vice versa, this serves as stupid workaround.
 	 * Object --jackson--> JSON String --javax--> JsonObject
@@ -28,14 +29,21 @@ public class Utils {
 	 * @throws JsonProcessingException 
 	 */
 	public static JsonObject toJsonObject(Object obj) throws JsonProcessingException {
-		ObjectMapper mapper = new ObjectMapper(); 
-		
-		
-        String jsonString = mapper.writeValueAsString(obj);
+		String jsonString = Utils.toJsonString(obj);
+        JsonObject jsonObject = toJsonObject(jsonString);
+        return jsonObject;
+	}
+	
+	public static JsonObject toJsonObject(String jsonString) throws JsonProcessingException {
         JsonReader jsonReader = Json.createReader(new StringReader(jsonString));
         JsonObject jsonObject = jsonReader.readObject();
         jsonReader.close();
         return jsonObject;
+	}
+	
+	public static String toJsonString(Object obj) throws JsonProcessingException {
+		String jsonString = MAPPER.writeValueAsString(obj);
+        return jsonString;
 	}
 	
 	public static String getString(JsonObject config, String key) {

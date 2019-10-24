@@ -33,10 +33,10 @@ import io.elastic.api.ExecutionParameters;
 import io.elastic.api.Message;
 import io.elastic.api.Module;
 
-public class ReadDir extends IxOperation<EloObject> {
+public class ReadDir extends IxOperation<ExtendedEloObject> {
 
 	@Override
-	protected EloObject run(IX ix, JsonObject config) throws Exception {
+	protected ExtendedEloObject run(IX ix, JsonObject config) throws Exception {
 		String guid = Utils.getString(config, "uid");
 		SimpleSord ss = ix.sords.get(guid, SordFeature.INFO, SordFeature.CHILDREN);
 		ExtendedEloObject obj = Utils.toEloObject(ss);
